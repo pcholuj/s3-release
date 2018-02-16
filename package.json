@@ -1,0 +1,98 @@
+{
+  "name": "semantic-s3-release",
+  "description": "Set of semantic-release plugins for publishing a s3 release",
+  "version": "1.0.0",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/semantic-release/github/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "contributors": [],
+  "dependencies": {
+    "@semantic-release/error": "^2.2.0",
+    "aggregate-error": "^1.0.0",
+    "aws-sdk": "^2.196.0",
+    "debug": "^3.1.0",
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2",
+    "globby": "^8.0.0",
+    "lodash": "^4.17.4",
+    "mime": "^2.0.3",
+    "p-reduce": "^1.0.0",
+    "url-join": "^4.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "aws-sdk-mock": "^1.7.0",
+    "clear-module": "^2.1.0",
+    "codecov": "^3.0.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "nock": "^9.1.0",
+    "nyc": "^11.2.1",
+    "semantic-release": "^12.2.2",
+    "sinon": "^4.0.0",
+    "tempy": "^0.2.1",
+    "xo": "^0.20.0"
+  },
+  "engines": {
+    "node": ">=8.3"
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "homepage": "",
+  "keywords": [
+    "git",
+    "s3",
+    "issue",
+    "notifications",
+    "publish",
+    "pull-request",
+    "release",
+    "semantic-release",
+    "version"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "nyc": {
+    "include": [
+      "lib/**/*.js",
+      "index.js"
+    ],
+    "reporter": [
+      "json",
+      "text",
+      "html"
+    ],
+    "all": true
+  },
+  "prettier": {
+    "printWidth": 120
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "next"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "cm": "git-cz",
+    "codecov": "codecov -f coverage/coverage-final.json",
+    "lint": "xo",
+    "pretest": "npm run lint",
+    "semantic-release": "semantic-release",
+    "test": "nyc ava -v"
+  },
+  "xo": {
+    "prettier": true,
+    "space": true
+  }
+}
